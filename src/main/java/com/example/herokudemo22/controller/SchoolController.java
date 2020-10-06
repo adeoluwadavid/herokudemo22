@@ -24,7 +24,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class SchoolController {
     @Autowired
     private SchoolRep schoolRep;
-    
+    @GetMapping("/get")
+    public String get(){
+        return "Heroku Demo that worked";
+    }
     @GetMapping("/all")
     public List<School> getAll(){
          return schoolRep.findAll();
